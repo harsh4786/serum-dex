@@ -577,7 +577,7 @@ impl MarketState {
     }
 
     fn pubkey(&self) -> Pubkey {
-        Pubkey::new_from_array(*cast_slice(&identity(self.own_address) as &[_]))
+        Pubkey::new_from_array(*array_ref![cast_slice::<u64, u8>(&identity(self.own_address)), 0, 32])
     }
 }
 
