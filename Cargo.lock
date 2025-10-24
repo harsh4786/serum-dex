@@ -281,9 +281,9 @@ checksum = "c5d78ce20460b82d3fa150275ed9d55e21064fc7951177baacf86a145c4a4b1f"
 
 [[package]]
 name = "arrayref"
-version = "0.3.6"
+version = "0.3.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a4c527152e37cf757a3f78aae5a06fbeefdb07ccc535c980a3208ee3060dd544"
+checksum = "76a2e8124351fda1ef8aaaa3bbd7ebbcb486bbcd4225aca0aa0d84bb2db8fecb"
 
 [[package]]
 name = "arrayvec"
@@ -2416,7 +2416,17 @@ version = "0.5.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cf5395665662ef45796a4ff5486c5d41d29e0c09640af4c5f17fd94ee2c119c9"
 dependencies = [
- "num_enum_derive",
+ "num_enum_derive 0.5.7",
+]
+
+[[package]]
+name = "num_enum"
+version = "0.7.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b1207a7e20ad57b847bbddc6776b968420d38292bbfe2089accff5e19e82454c"
+dependencies = [
+ "num_enum_derive 0.7.5",
+ "rustversion",
 ]
 
 [[package]]
@@ -2429,6 +2439,18 @@ dependencies = [
  "proc-macro2 1.0.103",
  "quote 1.0.41",
  "syn 1.0.89",
+]
+
+[[package]]
+name = "num_enum_derive"
+version = "0.7.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ff32365de1b6743cb203b710788263c44a03de03802daf96092f2da4fe6ba4d7"
+dependencies = [
+ "proc-macro-crate 3.4.0",
+ "proc-macro2 1.0.103",
+ "quote 1.0.41",
+ "syn 2.0.108",
 ]
 
 [[package]]
@@ -3402,7 +3424,7 @@ dependencies = [
  "field-offset",
  "itertools 0.9.0",
  "num-traits",
- "num_enum",
+ "num_enum 0.5.7",
  "safe-transmute",
  "serde",
  "solana-program 1.10.3",
@@ -3424,11 +3446,11 @@ dependencies = [
  "field-offset",
  "itertools 0.9.0",
  "num-traits",
- "num_enum",
+ "num_enum 0.5.7",
  "safe-transmute",
  "serde",
  "solana-program 2.3.0",
- "spl-token 3.2.0",
+ "spl-token 6.0.0",
  "static_assertions",
  "thiserror 1.0.30",
  "without-alloc",
@@ -5133,7 +5155,7 @@ dependencies = [
  "arrayref",
  "num-derive 0.3.3",
  "num-traits",
- "num_enum",
+ "num_enum 0.5.7",
  "remove_dir_all",
  "solana-sdk",
  "thiserror 1.0.30",
@@ -5148,8 +5170,23 @@ dependencies = [
  "arrayref",
  "num-derive 0.3.3",
  "num-traits",
- "num_enum",
+ "num_enum 0.5.7",
  "solana-program 1.10.3",
+ "thiserror 1.0.30",
+]
+
+[[package]]
+name = "spl-token"
+version = "6.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "70a0f06ac7f23dc0984931b1fe309468f14ea58e32660439c1cef19456f5d0e3"
+dependencies = [
+ "arrayref",
+ "bytemuck",
+ "num-derive 0.4.2",
+ "num-traits",
+ "num_enum 0.7.5",
+ "solana-program 2.3.0",
  "thiserror 1.0.30",
 ]
 
